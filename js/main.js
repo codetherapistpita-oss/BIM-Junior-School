@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initParticles();
   initButtonRipple();
   initPageTransitions();
+  initGalleryZoom();
 });
 
 /* Preloader — timed welcome screen (max 2.5s) */
@@ -309,7 +310,26 @@ function initButtonRipple() {
   });
 }
 
-/* Page transition on internal links */
+/* Gallery subtle zoom on scroll */
+function initGalleryZoom() {
+  const items = document.querySelectorAll(".gallery-item");
+  if (!items.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("gallery-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  items.forEach((item) => observer.observe(item));
+}
+
 function initPageTransitions() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
