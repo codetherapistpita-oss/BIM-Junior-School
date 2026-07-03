@@ -10,14 +10,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="preloader-active">
 
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="page-transition" aria-hidden="true"></div>
 
   <!-- Preloader -->
-  <div class="preloader">
-    <img src="images/logo.png" alt="Loading..." class="preloader-logo">
+  <div class="preloader" aria-label="Welcome to BIM Junior School">
+    <div class="preloader-bg"></div>
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-ring"></div>
+        <div class="preloader-ring preloader-ring-2"></div>
+        <img src="images/logo.png" alt="BIM Junior School Logo" class="preloader-logo">
+      </div>
+      <p class="preloader-welcome">Welcome to</p>
+      <h2 class="preloader-title">BIM Junior School</h2>
+      <p class="preloader-campus">Galaxy Campus</p>
+      <p class="preloader-motto"><i class="fas fa-heart"></i> Nurturing Hearts and Minds</p>
+      <div class="preloader-progress" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="preloader-curtain preloader-curtain--left"></div>
+    <div class="preloader-curtain preloader-curtain--right"></div>
   </div>
 
   <!-- Navigation -->

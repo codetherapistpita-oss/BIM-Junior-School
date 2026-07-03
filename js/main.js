@@ -17,15 +17,26 @@ document.addEventListener("DOMContentLoaded", () => {
   initPageTransitions();
 });
 
-/* Preloader */
+/* Preloader — timed welcome screen (max 2.5s) */
 function initPreloader() {
   const preloader = document.querySelector(".preloader");
   if (!preloader) return;
 
-  window.addEventListener("load", () => {
+  const TOTAL_MS = 2500;
+  const EXIT_START_MS = 2000;
+  let finished = false;
+
+  const finish = () => {
+    if (finished) return;
+    finished = true;
+
+    document.body.classList.remove("preloader-active");
     document.body.classList.add("loaded");
-    setTimeout(() => preloader.classList.add("hidden"), 800);
-  });
+    preloader.classList.add("hidden");
+  };
+
+  setTimeout(() => preloader.classList.add("exiting"), EXIT_START_MS);
+  setTimeout(finish, TOTAL_MS);
 }
 
 /* Navbar scroll effect */
