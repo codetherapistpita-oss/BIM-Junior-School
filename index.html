@@ -6,7 +6,7 @@
   <title>BIM Junior School Galaxy Campus | Nurturing Hearts and Minds</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -60,7 +60,6 @@
 
   <!-- Hero -->
   <section class="hero">
-    <img src="images/bg-wave-bottom.png" alt="" class="hero-wave hero-wave-bottom" aria-hidden="true">
     <div class="hero-shapes">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
@@ -82,12 +81,9 @@
         </div>
       </div>
       <div class="hero-visual reveal-right">
-        <div class="hero-photo-stack">
-          <div class="hero-photo hero-photo-main">
-            <img src="images/hero-main.jpg" alt="Child learning with a colourful book at BIM Junior School">
-          </div>
-          <div class="hero-photo hero-photo-secondary">
-            <img src="images/hero-alt.jpg" alt="Child building with blocks during play-based learning">
+        <div class="hero-card">
+          <div class="hero-logo-wrap">
+            <img src="images/logo.png" alt="BIM Junior School Galaxy Campus Logo">
           </div>
           <div class="hero-badge hero-badge-1">
             <i class="fas fa-star"></i> Excellence
@@ -181,9 +177,8 @@
       </div>
       <div class="programs-grid stagger-children">
         <div class="program-card">
-          <div class="program-image">
-            <img src="images/program-daycare.jpg" alt="Day Care play and learning">
-            <span class="program-image-overlay"><i class="fas fa-baby"></i></span>
+          <div class="program-image daycare">
+            <i class="fas fa-baby"></i>
           </div>
           <div class="program-body">
             <span class="program-age">Day Care</span>
@@ -195,9 +190,8 @@
           </div>
         </div>
         <div class="program-card">
-          <div class="program-image">
-            <img src="images/program-nursery.jpg" alt="Nursery children learning through play">
-            <span class="program-image-overlay"><i class="fas fa-puzzle-piece"></i></span>
+          <div class="program-image nursery">
+            <i class="fas fa-puzzle-piece"></i>
           </div>
           <div class="program-body">
             <span class="program-age">Nursery – KG</span>
@@ -209,9 +203,8 @@
           </div>
         </div>
         <div class="program-card">
-          <div class="program-image">
-            <img src="images/program-junior.jpg" alt="Junior students reading together">
-            <span class="program-image-overlay"><i class="fas fa-rocket"></i></span>
+          <div class="program-image junior">
+            <i class="fas fa-rocket"></i>
           </div>
           <div class="program-body">
             <span class="program-age">Junior 1 – 3</span>
@@ -221,39 +214,6 @@
               View Details <i class="fas fa-arrow-right"></i>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Campus Life Gallery -->
-  <section class="gallery-section">
-    <div class="container">
-      <div class="section-header reveal reveal-blur">
-        <span class="section-tag"><i class="fas fa-camera"></i> Campus Life</span>
-        <h2>Happy Moments at Galaxy Campus</h2>
-        <p>Learning, laughter, and discovery — see what makes our school a joyful place for every child.</p>
-      </div>
-      <div class="gallery-grid stagger-children">
-        <div class="gallery-item gallery-item--large">
-          <img src="images/about-play.jpg" alt="Children playing in a colourful campus tunnel">
-          <div class="gallery-caption"><i class="fas fa-child"></i> Active Play</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/about-creative.jpg" alt="Toddler exploring with a toy camera">
-          <div class="gallery-caption"><i class="fas fa-camera"></i> Creative Discovery</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/program-kg.jpg" alt="Colourful pencils and early learning">
-          <div class="gallery-caption"><i class="fas fa-palette"></i> Arts &amp; Crafts</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/program-j1.jpg" alt="Teacher guiding a student at a learning table">
-          <div class="gallery-caption"><i class="fas fa-chalkboard-user"></i> Guided Learning</div>
-        </div>
-        <div class="gallery-item gallery-item--wide">
-          <img src="images/about-campus.jpg" alt="Students learning together at their desks">
-          <div class="gallery-caption"><i class="fas fa-book-open"></i> Classroom Excellence</div>
         </div>
       </div>
     </div>
@@ -272,7 +232,7 @@
           <i class="fas fa-quote-left quote-icon"></i>
           <p>"BIM Junior School has been wonderful for our family. The teachers truly live by their motto — our daughter feels loved and challenged every day!"</p>
           <div class="testimonial-author">
-            <img src="images/testimonial-1.jpg" alt="Mrs. Adjei" class="author-photo">
+            <div class="author-avatar" style="background: linear-gradient(135deg, var(--purple), var(--purple-light));">A</div>
             <div>
               <h4>Mrs. Adjei</h4>
               <span>Parent — Junior 2</span>
@@ -283,7 +243,7 @@
           <i class="fas fa-quote-left quote-icon"></i>
           <p>"From Day Care to Junior 3, the school has been consistent in quality. The Galaxy Campus is clean, safe, and full of caring staff."</p>
           <div class="testimonial-author">
-            <img src="images/testimonial-2.jpg" alt="Mr. Kwame Osei" class="author-photo">
+            <div class="author-avatar" style="background: linear-gradient(135deg, var(--blue), var(--blue-bright));">K</div>
             <div>
               <h4>Mr. Kwame Osei</h4>
               <span>Parent — Junior 1</span>
@@ -294,7 +254,7 @@
           <i class="fas fa-quote-left quote-icon"></i>
           <p>"The purple and white uniforms give the children such pride. My son has grown in confidence and academics since joining Nursery."</p>
           <div class="testimonial-author">
-            <img src="images/testimonial-3.jpg" alt="Mrs. Efua Mensah" class="author-photo">
+            <div class="author-avatar" style="background: linear-gradient(135deg, var(--gold), #f9ca24);">E</div>
             <div>
               <h4>Mrs. Efua Mensah</h4>
               <span>Parent — Nursery</span>
@@ -365,7 +325,7 @@
           <h4>Contact Us</h4>
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
-            <span>Galaxy Campus, BIM Junior School</span>
+            <span>10b Salaama 9014, Kampala, Uganda</span>
           </div>
           <div class="contact-item">
             <i class="fas fa-phone"></i>

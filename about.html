@@ -6,7 +6,7 @@
   <title>About Us | BIM Junior School Galaxy Campus</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -59,11 +59,7 @@
   </nav>
 
   <!-- Page Hero -->
-  <section class="page-hero page-hero--image">
-    <div class="page-hero-bg">
-      <img src="images/hero-main.jpg" alt="">
-    </div>
-    <img src="images/bg-wave-bottom.png" alt="" class="hero-wave hero-wave-bottom" aria-hidden="true">
+  <section class="page-hero">
     <div class="hero-shapes">
       <div class="shape shape-1" style="width: 200px; height: 200px;"></div>
       <div class="shape shape-3"></div>
@@ -84,16 +80,8 @@
   <section class="about-story">
     <div class="container">
       <div class="story-grid">
-        <div class="story-collage reveal-left">
-          <div class="story-photo story-photo-main">
-            <img src="images/about-campus.jpg" alt="BIM Junior School students learning together">
-          </div>
-          <div class="story-photo story-photo-small story-photo-top">
-            <img src="images/about-play.jpg" alt="Children playing at Galaxy Campus">
-          </div>
-          <div class="story-photo story-photo-small story-photo-bottom">
-            <img src="images/about-creative.jpg" alt="Young learner exploring creatively">
-          </div>
+        <div class="story-image reveal-left" style="background: white; padding: 2rem;">
+          <img src="images/logo.png" alt="BIM Junior School Galaxy Campus Logo" style="width: 100%; height: 100%; object-fit: contain;">
         </div>
         <div class="story-content reveal-right">
           <span class="section-tag"><i class="fas fa-book-heart"></i> Our Story</span>
@@ -121,32 +109,32 @@
       </div>
       <div class="team-grid stagger-children">
         <div class="team-card">
-          <div class="team-avatar">
-            <img src="images/team-1.jpg" alt="Campus Director">
+          <div class="team-avatar" style="background: linear-gradient(135deg, var(--purple), var(--purple-light));">
+            <i class="fas fa-user"></i>
           </div>
           <h3>Mrs. Head of School</h3>
           <div class="role">Campus Director</div>
           <p>Leading Galaxy Campus with vision, passion, and a commitment to excellence.</p>
         </div>
         <div class="team-card">
-          <div class="team-avatar">
-            <img src="images/team-2.jpg" alt="Head of Academics">
+          <div class="team-avatar" style="background: linear-gradient(135deg, var(--blue), var(--blue-bright));">
+            <i class="fas fa-user"></i>
           </div>
           <h3>Mr. Academic Lead</h3>
           <div class="role">Head of Academics</div>
           <p>Overseeing curriculum delivery from Day Care through Junior 3.</p>
         </div>
         <div class="team-card">
-          <div class="team-avatar">
-            <img src="images/team-3.jpg" alt="Early Years Lead">
+          <div class="team-avatar" style="background: linear-gradient(135deg, var(--gold), #f9ca24);">
+            <i class="fas fa-user"></i>
           </div>
           <h3>Ms. Early Years Lead</h3>
           <div class="role">Day Care &amp; Nursery</div>
           <p>Expert in early childhood development and play-based learning.</p>
         </div>
         <div class="team-card">
-          <div class="team-avatar team-avatar--icon">
-            <i class="fas fa-user-graduate"></i>
+          <div class="team-avatar" style="background: linear-gradient(135deg, var(--purple-dark), var(--blue));">
+            <i class="fas fa-user"></i>
           </div>
           <h3>Mr. Junior School Lead</h3>
           <div class="role">Junior 1 – 3 Coordinator</div>
@@ -209,54 +197,36 @@
         <h2>All Class Levels — Day Care to Junior 3</h2>
         <p>Each programme is tailored to support growth at every stage of your child's journey.</p>
       </div>
-      <div class="programs-levels-grid stagger-children">
-        <div class="level-card">
-          <div class="level-card-image"><img src="images/program-daycare.jpg" alt="Day Care"></div>
-          <div class="level-card-body">
-            <span class="program-age">Day Care</span>
-            <h3>Little Stars</h3>
-            <p>A safe, nurturing environment with play-based routines and early social development.</p>
-          </div>
+      <div class="features-grid stagger-children">
+        <div class="feature-card">
+          <div class="feature-icon purple"><i class="fas fa-baby"></i></div>
+          <h3>Day Care</h3>
+          <p>A safe, nurturing environment with play-based routines, sensory activities, and early social development for our youngest learners.</p>
         </div>
-        <div class="level-card">
-          <div class="level-card-image"><img src="images/program-nursery.jpg" alt="Nursery"></div>
-          <div class="level-card-body">
-            <span class="program-age">Nursery</span>
-            <h3>Early Explorers</h3>
-            <p>Introduction to structured learning through songs, stories, and guided play.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon blue"><i class="fas fa-child"></i></div>
+          <h3>Nursery</h3>
+          <p>Introduction to structured learning through songs, stories, colours, shapes, and guided play activities.</p>
         </div>
-        <div class="level-card">
-          <div class="level-card-image"><img src="images/program-kg.jpg" alt="Kindergarten"></div>
-          <div class="level-card-body">
-            <span class="program-age">KG</span>
-            <h3>Kindergarten</h3>
-            <p>Building literacy, numeracy, and creativity through hands-on experiences.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon gold"><i class="fas fa-puzzle-piece"></i></div>
+          <h3>Kindergarten (KG)</h3>
+          <p>Building literacy, numeracy, and fine motor skills through creative, hands-on learning experiences.</p>
         </div>
-        <div class="level-card">
-          <div class="level-card-image"><img src="images/program-j1.jpg" alt="Junior 1"></div>
-          <div class="level-card-body">
-            <span class="program-age">Junior 1</span>
-            <h3>Foundation Class</h3>
-            <p>Strengthening reading, writing, and maths with growing independence.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon sky"><i class="fas fa-book"></i></div>
+          <h3>Junior 1</h3>
+          <p>Strengthening reading, writing, and mathematics foundations with growing independence and responsibility.</p>
         </div>
-        <div class="level-card">
-          <div class="level-card-image"><img src="images/program-j2.jpg" alt="Junior 2"></div>
-          <div class="level-card-body">
-            <span class="program-age">Junior 2</span>
-            <h3>Growing Leaders</h3>
-            <p>Advanced academics, critical thinking, and leadership opportunities.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon violet"><i class="fas fa-pen-fancy"></i></div>
+          <h3>Junior 2</h3>
+          <p>Advanced academics, critical thinking, and leadership opportunities within a supportive classroom community.</p>
         </div>
-        <div class="level-card">
-          <div class="level-card-image"><img src="images/program-junior.jpg" alt="Junior 3"></div>
-          <div class="level-card-body">
-            <span class="program-age">Junior 3</span>
-            <h3>School Ready</h3>
-            <p>Comprehensive academics and character development for the next chapter.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon navy"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Junior 3</h3>
+          <p>School readiness with comprehensive academics, exam preparation, and character development for the next chapter.</p>
         </div>
       </div>
     </div>
@@ -277,7 +247,7 @@
               </div>
               <div>
                 <strong>Visit Us</strong>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">BIM Junior School — Galaxy Campus</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">10b Salaama 9014, Kampala, Uganda</p>
               </div>
             </div>
             <div class="info-card">
@@ -367,11 +337,19 @@
           </div>
         </div>
       </div>
-      <div class="map-placeholder reveal map-placeholder--photo">
-        <img src="images/contact-hero.jpg" alt="Happy student at BIM Junior School">
-        <div class="map-placeholder-overlay">
-          <i class="fas fa-map-location-dot"></i>
-          <span>BIM Junior School — Galaxy Campus</span>
+      <div class="map-embed reveal">
+        <iframe
+          title="BIM Junior School Galaxy Campus — Kampala"
+          src="https://www.google.com/maps?q=0.253825,32.605962&hl=en&z=17&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-embed-footer">
+          <p><i class="fas fa-map-marker-alt"></i> 10b Salaama 9014, Kampala</p>
+          <a href="https://maps.app.goo.gl/JNjadvNRr5RPQ5Fc6" class="btn btn-primary map-directions" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-directions"></i> Open in Google Maps
+          </a>
         </div>
       </div>
     </div>
@@ -419,7 +397,7 @@
           <h4>Contact Us</h4>
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
-            <span>Galaxy Campus, BIM Junior School</span>
+            <span>10b Salaama 9014, Kampala, Uganda</span>
           </div>
           <div class="contact-item">
             <i class="fas fa-phone"></i>
