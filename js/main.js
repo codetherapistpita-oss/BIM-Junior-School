@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initParticles();
   initButtonRipple();
   initPageTransitions();
+  initHorizontalScroll();
 });
 
 /* Preloader — timed welcome screen (max 2.5s) */
@@ -95,7 +96,7 @@ function initMobileMenu() {
 /* Scroll reveal animations */
 function initScrollReveal() {
   const elements = document.querySelectorAll(
-    ".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-blur, .reveal-rotate, .stagger-children, .timeline-item, .section-header"
+    ".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-blur, .reveal-rotate, .stagger-children, .timeline-item, .section-header, .c-split"
   );
 
   if (!elements.length) return;
@@ -218,7 +219,7 @@ function initTiltCards() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const cards = document.querySelectorAll(
-    ".feature-card, .program-card, .team-card, .hero-card"
+    ".feature-card, .program-card, .team-card, .hero-card, .c-level-card, .c-moment"
   );
 
   cards.forEach((card) => {
@@ -307,6 +308,42 @@ function initButtonRipple() {
       setTimeout(() => ripple.remove(), 600);
     });
   });
+}
+
+/* Horizontal scroll drag on desktop */
+function initHorizontalScroll() {
+  const track = document.getElementById("hscroll-track");
+  if (!track) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  track.addEventListener("mousedown", (e) => {
+    isDown = true;
+    track.style.cursor = "grabbing";
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+  });
+
+  track.addEventListener("mouseleave", () => {
+    isDown = false;
+    track.style.cursor = "grab";
+  });
+
+  track.addEventListener("mouseup", () => {
+    isDown = false;
+    track.style.cursor = "grab";
+  });
+
+  track.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+
+  track.style.cursor = "grab";
 }
 
 /* Page transition on internal links */
